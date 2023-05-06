@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-class MobileBankApiTestV1 {
+class MobileBankApiTestV7 {
     @Test
     void shouldReturnedRequestBody() {
         // Given - When - Then
@@ -18,6 +18,6 @@ class MobileBankApiTestV1 {
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("some value"));
+                .body("data", equalTo("some data"));
     }
 }
